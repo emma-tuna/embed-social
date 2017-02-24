@@ -1,0 +1,29 @@
+.es-align-center{
+    text-align: center;
+    margin: 0 auto;
+    float: none;
+}
+.es-align-right{
+    text-align: right;
+    float: right;
+    margin-left:15px;
+}
+.es-align-left{
+    text-align: left;
+    float: left;
+    margin-right: 15px;
+}
+
+
+.es-insta-size-large{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    float: none;
+}
+.es-insta-size-medium{
+    width: 65%;
+}
+.es-insta-size-small{
+    width: 40%;
+}
