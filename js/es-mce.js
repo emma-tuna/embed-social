@@ -11,7 +11,7 @@
              */
             ed.addButton( 'button_es_embed', {
                 title : 'Insert Embed Social Shortcode',
-                image : '../wp-content/plugins/embed-social/images/es-button.png',
+                image : '../wp-content/plugins/embed-social/images/social-embed-icon.png',
                 onclick : function() {
                     ed.selection.setContent('[es-embed url= size=small align=center description=true]');
                 }
