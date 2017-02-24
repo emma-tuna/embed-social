@@ -2,7 +2,7 @@
     "name": "emmaedgar/embed-social",
     "type": "wordpress-plugin",
     "require": {
-        "composer/installers": "^1.2"
+        "composer/installers": "^1.0"
     },
     "authors": [
         {
