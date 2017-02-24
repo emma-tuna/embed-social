@@ -1,0 +1,13 @@
+{
+    "name": "emmaedgar/embed-social",
+    "type": "wordrdpress-plugin",
+    "require": {
+        "composer/installers": "^1.2"
+    },
+    "authors": [
+        {
+            "name": "Emma Edgar",
+            "email": "emma.edgar@tunatraffic.com"
+        }
+    ]
+}
