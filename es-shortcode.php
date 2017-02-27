@@ -15,7 +15,11 @@ require_once( ES__PLUGIN_DIR . '/services/instagram/instagram.php' );
 // Only if shortcode does not already exist
 if ( ! shortcode_exists( 'es-embed' ) ) {
 
-
+    /**
+     * Get shortcode attributes and call functions based on the service used
+     * @param $atts
+     * @return string|void
+     */
     function es_shortcode_atts( $atts ) {
         $atts = shortcode_atts(
             array(

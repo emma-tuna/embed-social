@@ -23,7 +23,6 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-
 /**
  * Define url and path constants
  */
