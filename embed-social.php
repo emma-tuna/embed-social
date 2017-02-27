@@ -35,9 +35,9 @@ define( 'ES__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
  */
 function es_register_scripts(){
 	wp_register_script( 'pin-embed-js', '//assets.pinterest.com/js/pinit.js' );
-    wp_register_style( 'es-styles', ES__PLUGIN_URL . '/styles/styles.css');
+    wp_register_style( 'es-styles', ES__PLUGIN_URL . 'styles/styles.css');
 }
-add_action( 'wp_enqueue_scripts', 'es_register_scripts' );
+add_action( 'init', 'es_register_scripts' );
 
 
 /**
