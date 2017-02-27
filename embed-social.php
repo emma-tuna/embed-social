@@ -2,14 +2,14 @@
 
 /**
  * @link              http://tunatraffic.com
- * @since             1.1.0
+ * @since             1.0.0
  * @package           Embed_Social
  *
  * @wordpress-plugin
  * Plugin Name:       Embed Social
  * Plugin URI:        http://example.com/i-embed-uri/
  * Description:       Embed images from Pinterest or Instegram on your site with a shortcode
- * Version:           1.0.0
+ * Version:           1.1.1
  * Author:            Tuna Traffic
  * Author URI:        http://tunatraffic.com/
  * License:           GPL-2.0+
