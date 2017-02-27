@@ -18,8 +18,8 @@ function es_get_instagram($atts){
     $obj = json_decode($json);
 
     $classes = 'es-align-' . $atts['align'] . ' es-insta-size-' . $atts['size'];
-
     wp_enqueue_style('es-styles');
+
     $html = '<div class="' . $classes . '">' . $obj->html . '</div>';
 
     return $html;

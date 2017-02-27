@@ -4,7 +4,7 @@ function es_pinterest_html( $atts ){
     wp_enqueue_script('pin-embed-js');
     wp_enqueue_style('es-styles');
 
-    $classes = 'es-align-' . $atts['align'];
+    $classes = 'es-align-' . $atts['align']  . ' es-pin-size-' . $atts['size'];
 
 
     $html = '<div class="' . $classes . '"><a data-pin-do="embedPin" ';

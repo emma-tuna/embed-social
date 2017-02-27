@@ -16,14 +16,26 @@
 
 
 .es-insta-size-large{
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-    float: none;
+  width: 100% ;
+    max-width: 600px !important;
 }
 .es-insta-size-medium{
-    width: 65%;
+  width: 100% ;
+    max-width: 345px !important;
 }
 .es-insta-size-small{
-    width: 40%;
+  width: 100% ;
+    max-width: 236px !important;
+}
+.es-insta-size-small>iframe,
+.es-insta-size-medium>iframe,
+.es-insta-size-large>iframe{
+    max-width: 100% !important;
+}
+
+
+.es-pin-size-small>span,
+.es-pin-size-medium>span,
+.es-pin-size-large>span{
+  min-width: initial !important;
 }
