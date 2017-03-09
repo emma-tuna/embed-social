@@ -33,6 +33,33 @@
     max-width: 100% !important;
 }
 
+/* Small width: 236px */
+@media screen and (max-width: 600px){
+    .es-pin-size-small{
+        text-align: center;
+        margin: 0 auto;
+        float: none;
+    }
+
+    .es-insta-size-small{
+        float: none;
+        margin: 0 auto;
+    }
+}
+
+/* Medium width: 345px */
+@media screen and (max-width: 800px){
+    .es-pin-size-medium{
+        text-align: center;
+        margin: 0 auto;
+        float: none;
+    }
+    .es-insta-size-medium{
+        float: none;
+        margin: 0 auto;
+    }
+}
+
 
 .es-pin-size-small>span,
 .es-pin-size-medium>span,
