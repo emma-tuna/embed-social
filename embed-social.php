@@ -45,3 +45,4 @@ add_action( 'init', 'es_register_scripts' );
  */
 require_once( ES__PLUGIN_DIR . 'es-shortcode.php' );
 require_once( ES__PLUGIN_DIR . 'es-wysiwyg-button.php' );
+

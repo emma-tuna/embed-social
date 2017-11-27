@@ -10,7 +10,7 @@ function es_pinterest_html( $atts ){
     $html = '<div class="' . $classes . '"><a data-pin-do="embedPin" ';
         if ($atts['size'] == 'medium' || $atts['size'] == 'large') $html .= 'data-pin-width="' . $atts['size'] . '" ';
         if($atts['description'] == 'false') $html .= 'data-pin-terse="true" ';
-        $html .= 'href="' . $atts['url'] . '"></a></div>';
+        $html .= 'href="https://pinterest.com/pin/' . $atts['id'] . '"></a></div>';
 
     return $html;
 }

@@ -9,7 +9,7 @@
 function es_get_instagram($atts){
 
     $oembed_url = 'https://api.instagram.com/oembed?url=';
-    $oembed_url .= $atts['url'];
+    $oembed_url .= 'https://www.instagr.am/p/' . $atts['id'];
     if( $atts['description'] == 'false'){
         $oembed_url .= '&hidecaption=true';
     }

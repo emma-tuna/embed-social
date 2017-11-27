@@ -23,20 +23,21 @@ if ( ! shortcode_exists( 'es-embed' ) ) {
     function es_shortcode_atts( $atts ) {
         $atts = shortcode_atts(
             array(
-                'url' => '',
+                'type' => '',
+                'id' => '',
                 'size' => 'small',
                 'description' => 'true',
                 'align' => 'center',
             ), $atts, 'pin_embed' );
 
 
-        if( $atts['url'] == '' )
+        if( $atts['id'] == '' )
             return;
 
-        if( strpos($atts['url'], 'pinterest.com')){
+        if( $atts['type'] == 'pinterest'){
             return es_pinterest_html($atts);
         }
-        if( strpos($atts['url'], 'instagr.am')){
+        if( $atts['type'] == 'instagram'){
             return es_get_instagram($atts);
         }
         // if( strpos($atts['url'], 'facebook.com')){
@@ -47,3 +48,4 @@ if ( ! shortcode_exists( 'es-embed' ) ) {
 
 
 }
+
