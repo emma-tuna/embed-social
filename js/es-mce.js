@@ -23,9 +23,12 @@
             editor.addCommand( 'es_popup', function(ui, v) {
 
                 // Defaults
-                var embedUrl = '';
-                if (v.embedUrl)
-                    embedUrl = v.embedUrl;
+                var embedType = '';
+                if (v.embedType)
+                    embedType = v.embedType;
+                var embedId = '';
+                if (v.embedId)
+                    embedId = v.embedId;
                 var embedAlign = '';
                 if (v.embedAlign)
                     embedAlign = v.embedAlign;
@@ -35,8 +38,6 @@
                 var embedDesc = '';
                 if (v.embedDesc)
                     embedDesc = v.embedDesc;
-
-
 
                 // Calls the pop-up modal
                 editor.windowManager.open({
@@ -48,14 +49,23 @@
                     inline: 1,
                     id: 'es-shortcode-builder-popup',
                     body: [
+                        { // type
+                            type: 'listbox',
+                            name: 'embedType',
+                            label: 'Social Media Platform',
+                            value: embedType,
+                            'values': [
+                                {text: 'Instagram', value: 'instagram'},
+                                {text: 'Pinterest', value: 'pinterest'}
+                            ]
+                        },
                         {//url
                             type: 'textbox',
-                            name: 'embedUrl',
-                            label: 'URL',
-                            value: embedUrl
+                            name: 'embedId',
+                            label: 'Post ID',
+                            value: embedId
                         },
-                        // alignment
-                        {
+                        { // alignment
                             type: 'listbox',
                             name: 'embedAlign',
                             label: 'Alignment',
@@ -66,8 +76,7 @@
                                 {text: 'Right', value: 'right'}
                             ]
                         },
-                        //embedSize
-                        {
+                        { //embedSize
                             type: 'listbox',
                             name: 'embedSize',
                             label: 'Size',
@@ -78,8 +87,7 @@
                                 {text: 'Large', value: 'large'}
                             ]
                         },
-                        //description
-                        {
+                        {//description
                             type: 'listbox',
                             name: 'embedDesc',
                             label: 'Description',
@@ -92,9 +100,15 @@
                     ],
                     onsubmit: function( e ) { //when the ok button is clicked
 
+                        if(typeof e.data.embedId != 'undefined' && e.data.embedId.length) {
+                            var id = e.data.embedId;
 
-                        if(typeof e.data.embedUrl != 'undefined' && e.data.embedUrl.length) {
-                            var url = e.data.embedUrl;
+                            var type = '';
+                            if(typeof e.data.embedType != 'undefined' && e.data.embedType.length){
+                                type = e.data.embedType;
+                            } else {
+                                type = 'false';
+                            }
 
                             var desc = '';
                             if(typeof e.data.embedDesc != 'undefined' && e.data.embedDesc.length){
@@ -103,7 +117,7 @@
                                 desc = 'false';
                             }
 
-                            var algin = '';
+                            var align = '';
                             if(typeof e.data.embedAlign != 'undefined' && e.data.embedAlign.length){
                                 align = e.data.embedAlign;
                             } else {
@@ -117,7 +131,7 @@
                                 size = 'small';
                             }
 
-                            var shortcode_str = '[es-embed url="'+url+'" align="'+align+'" size="'+size+'" description="'+desc+'"]';
+                            var shortcode_str = '[es-embed type="'+type+'" id="'+id+'" align="'+align+'" size="'+size+'" description="'+desc+'"]';
 
                             //insert shortcode to TinyMCE
                             editor.insertContent( shortcode_str);
