@@ -63,6 +63,7 @@
                             type: 'textbox',
                             name: 'embedId',
                             label: 'Post ID',
+                            tooltip: 'Example: The "BSmHXr5DmyT" in "instagram.com/p/BSmHXr5DmyT/"',
                             value: embedId
                         },
                         { // alignment
