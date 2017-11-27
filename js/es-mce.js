@@ -93,8 +93,8 @@
                             label: 'Description',
                             value: embedDesc,
                             'values': [
-                                {text: 'Hide', value: 'hide'},
-                                {text: 'Show', value: 'show'}
+                                {text: 'Hide', value: 'false'},
+                                {text: 'Show', value: 'true'}
                             ]
                         }
                     ],
@@ -107,7 +107,7 @@
                             if(typeof e.data.embedType != 'undefined' && e.data.embedType.length){
                                 type = e.data.embedType;
                             } else {
-                                type = 'false';
+                                type = '';
                             }
 
                             var desc = '';
