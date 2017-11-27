@@ -11,16 +11,16 @@
              */
             editor.addButton('button_es_embed', {
                 image : url + '/social-embed-icon.png',
-                tooltip: 'BootStrap Panel',
+                tooltip: 'Embed Social Shortcode Builder',
                 onclick: function() {
-                    editor.execCommand('bs3_panel_popup','',{
+                    editor.execCommand('es_popup','',{
                         embedUrl : ''
                     });
                 }
             });
 
-            // Called when we click the Insert Gistpen button
-            editor.addCommand( 'bs3_panel_popup', function(ui, v) {
+            // Called when we click the Embed Social Shortcode Builder
+            editor.addCommand( 'es_popup', function(ui, v) {
 
                 // Defaults
                 var embedUrl = '';
@@ -46,7 +46,7 @@
                     // minus head and foot of dialog box
                     height: (jQuery( window ).height() - 36 - 50) * 0.7,
                     inline: 1,
-                    id: 'plugin-slug-insert-dialog',
+                    id: 'es-shortcode-builder-popup',
                     body: [
                         {//url
                             type: 'textbox',
@@ -64,8 +64,7 @@
                                 {text: 'Left', value: 'left'},
                                 {text: 'Center', value: 'center'},
                                 {text: 'Right', value: 'right'}
-                            ],
-                            tooltip: 'Select the type of panel you want'
+                            ]
                         },
                         //embedSize
                         {
